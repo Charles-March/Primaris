@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1385320476 source:c:\users\stractus\primaris\v 0.0.1\primaris\main.c
+	<windows.h>
+	<gl/gl.h>
+
