@@ -176,7 +176,9 @@ void DisableOpenGL (HWND hwnd, HDC hDC, HGLRC hRC)
     wglDeleteContext(hRC);
     ReleaseDC(hwnd, hDC);
 }
-
-main(){
+/*
+int main(int argc, char* argv[]){
 printf("hello world");
+EnableOpenGL();
 }
+*/
