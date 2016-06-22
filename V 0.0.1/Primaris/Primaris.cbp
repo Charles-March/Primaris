@@ -30,12 +30,13 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="../../depend/glut-3.7/include/GL" />
+			<Add directory="../../depend/glut-3.7/more" />
 		</Compiler>
 		<Linker>
 			<Add library="opengl32" />
 			<Add library="glu32" />
 			<Add library="gdi32" />
+			<Add library="..\..\depend\glut-3.7\more\glut32.lib" />
 		</Linker>
 		<Unit filename="main.cpp">
 			<Option compilerVar="CC" />

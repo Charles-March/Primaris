@@ -21,7 +21,6 @@ create();
 }
 void maj(){
 DrawText(this->hdc,s1,strlen(s1),&r1,DT_CENTER);
-
 }
 void create(){
 /*
