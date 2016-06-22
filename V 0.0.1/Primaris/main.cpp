@@ -5,7 +5,17 @@
 LRESULT CALLBACK WindowProc(HWND, UINT, WPARAM, LPARAM);
 void EnableOpenGL(HWND hwnd, HDC*, HGLRC*);
 void DisableOpenGL(HWND, HDC, HGLRC);
+int speed=1;
 
+void go(){
+    if(GetKeyState( (int)'a')){
+        speed++;
+    }
+    else if(GetKeyState( (int)'b')){
+        if(speed>0) speed--;
+    }
+
+}
 
 int WINAPI WinMain(HINSTANCE hInstance,
                    HINSTANCE hPrevInstance,
@@ -58,6 +68,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     EnableOpenGL(hwnd, &hDC, &hRC);
 
     /* program main loop */
+    EnableWindow(hwnd,true);
     while (!bQuit)
     {
         /* check for messages */
@@ -72,17 +83,20 @@ int WINAPI WinMain(HINSTANCE hInstance,
             {
                 TranslateMessage(&msg);
                 DispatchMessage(&msg);
+               // printf("%d\n",msg);
+
             }
         }
         else
         {
             /* OpenGL animation code goes here */
+            go();
 
             glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
             glClear(GL_COLOR_BUFFER_BIT);
 
             glPushMatrix();
-            glRotatef(theta, 0.0f, 0.0f, 1.0f);
+            glRotatef(speed, 0.0f, 0.0f, 1.0f);
 
             glBegin(GL_TRIANGLES);
 
@@ -96,7 +110,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
             SwapBuffers(hDC);
 
-            theta += 1.0f;
+          //  theta += speed;
             Sleep (1);
         }
     }
@@ -132,6 +146,18 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
         }
         break;
 
+                case WM_CHAR:
+                    switch(wParam){
+                        case 'a':
+                            speed++;
+                        break;
+
+                        case 'b':
+                            speed--;
+                        break;
+
+                    }
+                break;
         default:
             return DefWindowProc(hwnd, uMsg, wParam, lParam);
     }

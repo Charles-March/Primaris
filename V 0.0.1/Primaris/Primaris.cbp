@@ -30,6 +30,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="../../../Documents/dev/C/SDL2/SDL2/include" />
 		</Compiler>
 		<Linker>
 			<Add library="opengl32" />
