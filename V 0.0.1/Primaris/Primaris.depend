@@ -7,19 +7,23 @@
 	<windows.h>
 	<gl/gl.h>
 
-1466594173 source:c:\users\stractus\primaris\v 0.0.1\primaris\main.cpp
+1466601888 source:c:\users\stractus\primaris\v 0.0.1\primaris\main.cpp
 	<stdio.h>
 	<windows.h>
 	<gl/gl.h>
-	"glut.h"
-	"menu.h"
+	<glut.h>
+	"menu.cpp"
 
-1466594435 c:\users\stractus\primaris\v 0.0.1\primaris\menu.h
+1466598680 c:\users\stractus\primaris\v 0.0.1\primaris\menu.h
 	<windows.h>
 	<gl/gl.h>
+	"menu.cpp"
 
-1466594445 source:c:\users\stractus\primaris\v 0.0.1\primaris\menu.cpp
-	"menu.h"
+1466601942 source:c:\users\stractus\primaris\v 0.0.1\primaris\menu.cpp
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	<gl/gl.h>
 	<glut.h>
 
 902922872 c:\users\stractus\documents\dev\c\glut-3.7\include\gl\glut.h
@@ -31,4 +35,16 @@
 	<windows.h>
 	<GL/gl.h>
 	<GL/glu.h>
+
+881811680 c:\users\stractus\primaris\depend\glut-3.7\more\glut.h
+	<windows.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1466601942 c:\users\stractus\primaris\v 0.0.1\primaris\menu.cpp
+	<windows.h>
+	<stdio.h>
+	<stdlib.h>
+	<gl/gl.h>
+	<glut.h>
 

@@ -2,22 +2,14 @@
 #include <windows.h>
 #include <gl/gl.h>
 #include <glut.h>
-#include "menu.h"
+
 
 LRESULT CALLBACK WindowProc(HWND, UINT, WPARAM, LPARAM);
 void EnableOpenGL(HWND hwnd, HDC*, HGLRC*);
 void DisableOpenGL(HWND, HDC, HGLRC);
 int speed=1;
 
-void go(){
-    if(GetKeyState( (int)'a')){
-        speed++;
-    }
-    else if(GetKeyState( (int)'b')){
-        if(speed>0) speed--;
-    }
-
-}
+#include "menu.cpp"
 
 int WINAPI WinMain(HINSTANCE hInstance,
                    HINSTANCE hPrevInstance,
@@ -70,7 +62,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
     EnableOpenGL(hwnd, &hDC, &hRC);
 
     /* program main loop */
-    menu_moteur_gauche* meng = new menu_moteur_gauche(0,0);
+    menu_moteur_gauche* meng = new menu_moteur_gauche(600,600,hDC);
     EnableWindow(hwnd,true);
 
     while (!bQuit)
@@ -94,7 +86,6 @@ int WINAPI WinMain(HINSTANCE hInstance,
         else
         {
             /* OpenGL animation code goes here */
-            go();
 
             glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
             glClear(GL_COLOR_BUFFER_BIT);
@@ -115,7 +106,9 @@ int WINAPI WinMain(HINSTANCE hInstance,
             SwapBuffers(hDC);
 
           //  theta += speed;
+         // printf("%d\n",speed);
             Sleep (1);
+            meng->maj();
         }
     }
 
@@ -153,10 +146,12 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
                 case WM_CHAR:
                     switch(wParam){
                         case 'a':
+                        case 'A':
                             speed++;
                         break;
 
-                        case 'b':
+                        case 'e':
+                        case 'E':
                             speed--;
                         break;
 
