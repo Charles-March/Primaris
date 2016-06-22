@@ -1,16 +1,22 @@
+#ifdef __cplusplus
+    #include <cstdlib>
+#else
+    #include <stdlib.h>
+#endif
 #include <stdio.h>
-#include <windows.h>
 #include <gl/gl.h>
-#include <glut.h>
+//#include <glut.h>
+#include <SDL.h>
 
-
+/*
 LRESULT CALLBACK WindowProc(HWND, UINT, WPARAM, LPARAM);
 void EnableOpenGL(HWND hwnd, HDC*, HGLRC*);
 void DisableOpenGL(HWND, HDC, HGLRC);
 int speed=1;
 
 #include "menu.cpp"
-
+*/
+/*
 int WINAPI WinMain(HINSTANCE hInstance,
                    HINSTANCE hPrevInstance,
                    LPSTR lpCmdLine,
@@ -24,7 +30,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
     BOOL bQuit = FALSE;
     float theta = 0.0f;
 
-    /* register window class */
+   // register window class */
+  /*
     wcex.cbSize = sizeof(WNDCLASSEX);
     wcex.style = CS_OWNDC;
     wcex.lpfnWndProc = WindowProc;
@@ -42,7 +49,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
     if (!RegisterClassEx(&wcex))
         return 0;
 
-    /* create main window */
+  //   create main window */
+  /*
     hwnd = CreateWindowEx(0,
                           "GLSample",
                           "Primaris : Moteur",
@@ -58,19 +66,23 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
     ShowWindow(hwnd, nCmdShow);
 
-    /* enable OpenGL for the window */
+  //   enable OpenGL for the window */
+  /*
     EnableOpenGL(hwnd, &hDC, &hRC);
 
-    /* program main loop */
+  //   program main loop */
+  /*
     menu_moteur_gauche* meng = new menu_moteur_gauche(600,600,hDC);
     EnableWindow(hwnd,true);
 
     while (!bQuit)
     {
-        /* check for messages */
+         check for messages */
+        /*
         if (PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
         {
-            /* handle or dispatch messages */
+            handle or dispatch messages */
+            /*
             if (msg.message == WM_QUIT)
             {
                 bQuit = TRUE;
@@ -85,7 +97,8 @@ int WINAPI WinMain(HINSTANCE hInstance,
         }
         else
         {
-            /* OpenGL animation code goes here */
+     //        OpenGL animation code goes here */
+     /*
 
             glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
             glClear(GL_COLOR_BUFFER_BIT);
@@ -112,10 +125,12 @@ int WINAPI WinMain(HINSTANCE hInstance,
         }
     }
 
-    /* shutdown OpenGL */
+   // shutdown OpenGL */
+   /*
     DisableOpenGL(hwnd, hDC, hRC);
 
-    /* destroy the window explicitly */
+   // destroy the window explicitly */
+   /*
     DestroyWindow(hwnd);
 
     return msg.wParam;
@@ -170,10 +185,12 @@ void EnableOpenGL(HWND hwnd, HDC* hDC, HGLRC* hRC)
 
     int iFormat;
 
-    /* get the device context (DC) */
+ //    get the device context (DC) */
+ /*
     *hDC = GetDC(hwnd);
 
-    /* set the pixel format for the DC */
+ //   set the pixel format for the DC */
+ /*
     ZeroMemory(&pfd, sizeof(pfd));
 
     pfd.nSize = sizeof(pfd);
@@ -189,7 +206,8 @@ void EnableOpenGL(HWND hwnd, HDC* hDC, HGLRC* hRC)
 
     SetPixelFormat(*hDC, iFormat, &pfd);
 
-    /* create and enable the render context (RC) */
+ //   create and enable the render context (RC) */
+ /*
     *hRC = wglCreateContext(*hDC);
 
     wglMakeCurrent(*hDC, *hRC);
@@ -201,9 +219,12 @@ void DisableOpenGL (HWND hwnd, HDC hDC, HGLRC hRC)
     wglDeleteContext(hRC);
     ReleaseDC(hwnd, hDC);
 }
-/*
-int main(int argc, char* argv[]){
-printf("hello world");
-EnableOpenGL();
-}
 */
+
+int main(int argc, char* argv[]){
+SDL_Init(SDL_INIT_VIDEO);
+printf("hello world");
+
+
+return 0;
+}

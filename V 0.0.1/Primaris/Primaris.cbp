@@ -31,12 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add directory="../../depend/glut-3.7/more" />
+			<Add directory="../../depend/SDL2/SDL2/include" />
 		</Compiler>
 		<Linker>
 			<Add library="opengl32" />
 			<Add library="glu32" />
 			<Add library="gdi32" />
 			<Add library="..\..\depend\glut-3.7\more\glut32.lib" />
+			<Add library="..\..\depend\SDL2\SDL2\lib\SDL2.lib" />
 		</Linker>
 		<Unit filename="main.cpp">
 			<Option compilerVar="CC" />

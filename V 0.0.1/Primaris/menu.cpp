@@ -1,9 +1,8 @@
-#include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <gl/gl.h>
 #include <glut.h>
-
+/*
 class menu_moteur_gauche{
 public:
 int x,y;
@@ -23,13 +22,12 @@ void maj(){
 DrawText(this->hdc,s1,strlen(s1),&r1,DT_CENTER);
 }
 void create(){
-/*
+
 glColor3f(254,0.0,0.0);
 unsigned int i;
 void* font = GLUT_BITMAP_8_BY_13;
 glRasterPos2f(x,y);
 glCallLists(strlen(s1),GL_UNSIGNED_BYTE,s1);
-/*
 
 for(i=0;i<strlen(s1);i++){
     glutBitmapCharacter(font,s1[i]);
@@ -38,7 +36,7 @@ for(i=0;i<strlen(s1);i++){
 }
 //printf("\n");
 */
-
+/*
 r1.left=x;
 r1.top=y;
 r1.bottom=r1.top+16;
@@ -46,3 +44,4 @@ r1.right=r1.left+strlen(s1)*10;
 }
 
 };
+*/
