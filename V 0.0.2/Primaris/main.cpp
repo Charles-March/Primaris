@@ -26,12 +26,13 @@ int main(int argc,char** argv){
     Init_SDL();
     //Display_Render();
 bool continuer=true;
-SDL_GL_SwapWindow(displayWindow);
+
 
 while(continuer){
     AffichageMenu();
     continuer=Event_Moteur();
     AffichageJeu();
+    SDL_GL_SwapWindow(displayWindow);
 }
 
 return 0;
