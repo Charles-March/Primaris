@@ -35,8 +35,8 @@ bool continuer=true;
 
 
 while(continuer){
-    //SDL_GL_SwapWindow(displayWindow);
     rectanglePlein(0,0,TAILLEX,TAILLEY,noir,displayRenderer);
+    //SDL_GL_SwapWindow(displayWindow);
     AffichageMenu();
     continuer=Event_Moteur();
     AffichageJeu();
