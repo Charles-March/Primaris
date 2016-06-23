@@ -4,7 +4,18 @@ void MenuGauche(SDL_Renderer* renderer){
 
 void MenuHaut(SDL_Renderer* renderer){
     rectanglePlein(0, 1, 1366, 30, blanc, renderer);
-    affichetexte("Fichier", 20, 5, 30, "JackI.TTF", rouge, renderer);
+
+    rectangleVide(0, 0, 100, 32, noir, renderer);
+    affichetexte("Nouveau", 11, 6, 20, "JackI.TTF", noir, renderer);
+
+    rectangleVide(99, 0, 100, 32, noir, renderer);
+    affichetexte("Ouvrir", 116, 6, 20, "JackI.TTF", noir, renderer);
+
+    rectangleVide(198, 0, 150, 32, noir, renderer);
+    affichetexte("Enregistrer", 214, 6, 20, "JackI.TTF", noir, renderer);
+
+    rectangleVide(347, 0, 200, 32, noir, renderer);
+    affichetexte("Enregistrer sous", 364, 6, 20, "JackI.TTF", noir, renderer);
 }
 
 void AffichageMenu(){
