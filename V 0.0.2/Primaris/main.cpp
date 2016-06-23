@@ -18,7 +18,10 @@ SDL_Renderer* displayRenderer;
 SDL_Window* displayWindow;
 coordonnees finMenu;
 
-
+#include "objet.h"
+#include "coffre.h"
+#include "enemi.h"
+#include "jeu.h"
 #include "FonctionAffichageSDL.h"
 #include "menu.h"
 #include "MoteurMain.h"

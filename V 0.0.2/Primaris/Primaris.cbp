@@ -48,9 +48,13 @@
 		<Unit filename="FonctionAffichageSDL.h" />
 		<Unit filename="Init.h" />
 		<Unit filename="MoteurMain.h" />
+		<Unit filename="coffre.h" />
 		<Unit filename="coordonnees.h" />
+		<Unit filename="enemi.h" />
+		<Unit filename="jeu.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="menu.h" />
+		<Unit filename="objet.h" />
 		<Unit filename="polygone.h" />
 		<Unit filename="sample.txt" />
 		<Extensions>
