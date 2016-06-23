@@ -21,6 +21,7 @@ coordonnees finMenu;
 #include "objet.h"
 #include "coffre.h"
 #include "enemi.h"
+#include "hero.h"
 #include "jeu.h"
 #include "FonctionAffichageSDL.h"
 #include "menu.h"

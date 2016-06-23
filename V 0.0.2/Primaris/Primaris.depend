@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1466676428 source:c:\users\stractus\primaris\v 0.0.2\primaris\main.cpp
+1466678720 source:c:\users\stractus\primaris\v 0.0.2\primaris\main.cpp
 	<cstdlib>
 	<stdlib.h>
 	<windows.h>
@@ -12,6 +12,11 @@
 	<SDL2/SDL_opengl.h>
 	<SDL2/SDL_ttf.h>
 	"polygone.h"
+	"objet.h"
+	"coffre.h"
+	"enemi.h"
+	"hero.h"
+	"jeu.h"
 	"FonctionAffichageSDL.h"
 	"menu.h"
 	"MoteurMain.h"
@@ -369,13 +374,23 @@
 	<list>
 	"coordonnees.h"
 
-1466672819 c:\users\stractus\primaris\v 0.0.2\primaris\coordonnees.h
+1466677830 c:\users\stractus\primaris\v 0.0.2\primaris\coordonnees.h
 
 1466675578 c:\users\stractus\primaris\v 0.0.2\primaris\fonctionaffichagesdl.h
 
-1466676366 c:\users\stractus\primaris\v 0.0.2\primaris\menu.h
+1466678563 c:\users\stractus\primaris\v 0.0.2\primaris\menu.h
 
 1466676169 c:\users\stractus\primaris\v 0.0.2\primaris\init.h
 
 1466676413 c:\users\stractus\primaris\v 0.0.2\primaris\moteurmain.h
+
+1466678392 c:\users\stractus\primaris\v 0.0.2\primaris\objet.h
+
+1466678386 c:\users\stractus\primaris\v 0.0.2\primaris\coffre.h
+
+1466678202 c:\users\stractus\primaris\v 0.0.2\primaris\enemi.h
+
+1466678670 c:\users\stractus\primaris\v 0.0.2\primaris\hero.h
+
+1466678684 c:\users\stractus\primaris\v 0.0.2\primaris\jeu.h
 

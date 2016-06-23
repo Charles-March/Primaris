@@ -51,6 +51,7 @@
 		<Unit filename="coffre.h" />
 		<Unit filename="coordonnees.h" />
 		<Unit filename="enemi.h" />
+		<Unit filename="hero.h" />
 		<Unit filename="jeu.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="menu.h" />
