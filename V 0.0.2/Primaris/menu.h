@@ -1,8 +1,8 @@
-void MenuGauche(SDL_Renderer* renderer){
+void MenuGauche(SDL_Renderer* renderer,boolEvenement& boolEvent){
     rectanglePlein(1, 32, 200, 500, blanc, renderer);
 }
 
-void MenuHaut(SDL_Renderer* renderer){
+void MenuHaut(SDL_Renderer* renderer,boolEvenement boolEvent){
     rectanglePlein(0, 1, 1366, 30, blanc, renderer);
 
     rectangleVide(0, 0, 100, 32, noir, renderer);
@@ -16,9 +16,14 @@ void MenuHaut(SDL_Renderer* renderer){
 
     rectangleVide(347, 0, 205, 32, noir, renderer);
     affichetexte("Enregistrer sous", 364, 6, 20, "JackI.TTF", noir, renderer);
+
+    printf("%d", boolEvent.SourisSurNouveau);
+
+    if(boolEvent.SourisSurNouveau==true)
+        rectangleVide(1, 1, 98, 30, noir, renderer);
 }
 
-void AffichageMenu(){
-    MenuGauche(displayRenderer);
-    MenuHaut(displayRenderer);
+void AffichageMenu(boolEvenement& boolEvent){
+    MenuGauche(displayRenderer,boolEvent);
+    MenuHaut(displayRenderer,boolEvent);
 }

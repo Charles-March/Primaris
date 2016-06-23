@@ -19,6 +19,10 @@ SDL_Renderer* displayRenderer;
 SDL_Window* displayWindow;
 coordonnees finMenu;
 
+struct boolEvenement {
+    bool SourisSurNouveau;
+};
+
 #include "objet.h"
 #include "coffre.h"
 #include "enemi.h"
@@ -32,15 +36,16 @@ coordonnees finMenu;
 int main(int argc,char** argv){
     Init_SDL();
     //Display_Render();
-bool continuer=true;
+    bool continuer=true;
+    struct boolEvenement boolEvent = {false};
 
 map map01("textureTest.jpg");
 
 while(continuer){
     rectanglePlein(0,0,TAILLEX,TAILLEY,noir,displayRenderer);
     //SDL_GL_SwapWindow(displayWindow);
-    AffichageMenu();
-    continuer=Event_Moteur();
+    AffichageMenu(boolEvent);
+    continuer=Event_Moteur(boolEvent);
     AffichageJeu();
 
 

@@ -1,10 +1,11 @@
-void DeplacementSouris(int Mx, int My){
-    if(Mx>=0 && Mx<=100 && My>=0 && My<=30) {
-        rectangleVide(1, 1, 98, 30, noir, displayRenderer);
-    }
+void DeplacementSouris(int Mx, int My, boolEvenement& boolEvent){
+    if(Mx>=0 && Mx<=100 && My>=0 && My<=30)
+        boolEvent.SourisSurNouveau = true;
+    else
+        boolEvent.SourisSurNouveau = false;
 }
 
-bool Event_Moteur(){
+bool Event_Moteur(boolEvenement& boolEvent){
 SDL_Event event;
 SDL_WaitEvent(&event);
 int Mx,My;
@@ -38,7 +39,7 @@ switch(event.type){
 
     case SDL_MOUSEMOTION:
         SDL_GetMouseState(&Mx,&My);
-        DeplacementSouris(Mx,My);
+        DeplacementSouris(Mx,My,boolEvent);
     break;
 
     case SDL_KEYDOWN:
