@@ -1,5 +1,5 @@
-#define Imgpath "../ressource/img/"
-
+#define Imgpath "../../ressource/img/"
+#define FontPath "../../ressource/font/"
 SDL_Rect tempT;
 TTF_Font *police=NULL;
 
@@ -17,14 +17,16 @@ SDL_RenderPresent(renderer);
 SDL_RenderClear(renderer);
 }
 
-void affichetexte(char* text,int x, int y, int Taille, char* policeN,SDL_Color Color,SDL_Renderer* renderer)
+void affichetexte(const char* text,int x, int y, int Taille,const char* policeN,SDL_Color Color,SDL_Renderer* renderer)
 {
 int w=0,h=0;
 SDL_Surface *Surface=NULL;
 SDL_Texture *texture=NULL;
 tempT.x=x;
 tempT.y=y;
-police=TTF_OpenFont(policeN,Taille);
+char T[75];
+sprintf(T,"%s%s",FontPath,policeN);
+police=TTF_OpenFont(T,Taille);
 
 if((police!=NULL)&&(text!=NULL)){
 
@@ -34,7 +36,7 @@ SDL_QueryTexture(texture,NULL,NULL,&w,&h);
 tempT.w=w;tempT.h=h;
 SDL_RenderCopy(renderer,texture,NULL,&tempT);
                                 }
-else printf("NTM %s JE CONNAIS PAS",policeN);
+else printf("NTM \"%s\" JE CONNAIS PAS ET TON TEXTE LA : \"%s\" IL PU PUTAIN\n",T,text);
 TTF_CloseFont(police);
 SDL_DestroyTexture(texture);
 SDL_FreeSurface(Surface);
