@@ -54,7 +54,7 @@ int Display_SetViewport( int width, int height )
 }
 
 void Init_SDL(){
- SDL_Init(SDL_INIT_VIDEO);
+    SDL_Init(SDL_INIT_VIDEO);
     TTF_Init();
 
     SDL_RendererInfo displayRendererInfo;
@@ -66,7 +66,9 @@ void Init_SDL(){
         /*TODO: Handle this. We have no render surface and not accelerated. */
     }
 
-     SDL_GL_CreateContext(displayWindow);
+    SDL_GL_CreateContext(displayWindow);
+    finMenu.setX(202);
+    finMenu.setY(32);
     Display_InitGL();
 
     Display_SetViewport(TAILLEX, TAILLEY);
