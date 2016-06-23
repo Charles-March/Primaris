@@ -14,7 +14,7 @@ void MenuHaut(SDL_Renderer* renderer){
     rectangleVide(198, 0, 150, 32, noir, renderer);
     affichetexte("Enregistrer", 214, 6, 20, "JackI.TTF", noir, renderer);
 
-    rectangleVide(347, 0, 200, 32, noir, renderer);
+    rectangleVide(347, 0, 205, 32, noir, renderer);
     affichetexte("Enregistrer sous", 364, 6, 20, "JackI.TTF", noir, renderer);
 }
 
