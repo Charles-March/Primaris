@@ -35,7 +35,7 @@ int Display_SetViewport( int width, int height )
     ratio = ( GLfloat )width / ( GLfloat )height;
 
     /* Setup our viewport. */
-    glViewport( 0, 0, ( GLsizei )width, ( GLsizei )height );
+    glViewport( finMenu.getX(), finMenu.getY(), ( GLsizei )width, ( GLsizei )height );
 
     /* change to the projection matrix and set our viewing volume. */
     glMatrixMode( GL_PROJECTION );
@@ -65,13 +65,19 @@ void Init_SDL(){
         (displayRendererInfo.flags & SDL_RENDERER_TARGETTEXTURE) == 0) {
         /*TODO: Handle this. We have no render surface and not accelerated. */
     }
+    SDL_GL_SetAttribute( SDL_GL_RED_SIZE, 5 );
+    SDL_GL_SetAttribute( SDL_GL_GREEN_SIZE, 5 );
+    SDL_GL_SetAttribute( SDL_GL_BLUE_SIZE, 5 );
+    SDL_GL_SetAttribute( SDL_GL_DEPTH_SIZE, 16 );
+    SDL_GL_SetAttribute( SDL_GL_DOUBLEBUFFER, 1 );
+
 
     SDL_GL_CreateContext(displayWindow);
     finMenu.setX(202);
     finMenu.setY(32);
     Display_InitGL();
 
-    Display_SetViewport(TAILLEX, TAILLEY);
+    Display_SetViewport(TAILLEX-finMenu.getX(), TAILLEY-finMenu.getY());
 
 }
 
