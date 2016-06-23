@@ -17,8 +17,6 @@ void MenuHaut(SDL_Renderer* renderer,boolEvenement boolEvent){
     rectangleVide(347, 0, 205, 32, noir, renderer);
     affichetexte("Enregistrer sous", 364, 6, 20, "JackI.TTF", noir, renderer);
 
-    printf("%d", boolEvent.SourisSurNouveau);
-
     if(boolEvent.SourisSurNouveau==true)
         rectangleVide(1, 1, 98, 30, noir, renderer);
 }
