@@ -55,7 +55,7 @@ int Display_SetViewport( int width, int height )
 
 void Init_SDL(){
  SDL_Init(SDL_INIT_VIDEO);
-
+    TTF_Init();
 
     SDL_RendererInfo displayRendererInfo;
     SDL_CreateWindowAndRenderer(TAILLEX,TAILLEY, SDL_WINDOW_OPENGL, &displayWindow, &displayRenderer);
