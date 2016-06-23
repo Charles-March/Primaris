@@ -35,7 +35,7 @@ bool continuer=true;
 
 
 while(continuer){
-    rectanglePlein(0,0,TAILLEX,TAILLEY,noire,displayRenderer);
+    rectanglePlein(0,0,TAILLEX,TAILLEY,noir,displayRenderer);
     AffichageMenu();
     continuer=Event_Moteur();
     AffichageJeu();

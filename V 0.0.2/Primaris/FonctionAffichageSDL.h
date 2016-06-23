@@ -3,7 +3,7 @@
 SDL_Rect tempT;
 TTF_Font *police=NULL;
 
-SDL_Color noire={0,0,0};
+SDL_Color noir={0,0,0};
 SDL_Color vert={120,255,120};
 SDL_Color bleu={120,120,255};
 SDL_Color rouge={255,120,120};
