@@ -1,3 +1,6 @@
+#define TAILLEX 1366
+#define TAILLEY 768
+
 void Display_InitGL()
 {
     /* Enable smooth shading */
@@ -55,7 +58,7 @@ void Init_SDL(){
 
 
     SDL_RendererInfo displayRendererInfo;
-    SDL_CreateWindowAndRenderer(1366, 768, SDL_WINDOW_OPENGL, &displayWindow, &displayRenderer);
+    SDL_CreateWindowAndRenderer(TAILLEX,TAILLEY, SDL_WINDOW_OPENGL, &displayWindow, &displayRenderer);
     SDL_GetRendererInfo(displayRenderer, &displayRendererInfo);
     /*TODO: Check that we have OpenGL */
     if ((displayRendererInfo.flags & SDL_RENDERER_ACCELERATED) == 0 ||
@@ -66,7 +69,7 @@ void Init_SDL(){
      SDL_GL_CreateContext(displayWindow);
     Display_InitGL();
 
-    Display_SetViewport(1366, 768);
+    Display_SetViewport(TAILLEX, TAILLEY);
 
 }
 
