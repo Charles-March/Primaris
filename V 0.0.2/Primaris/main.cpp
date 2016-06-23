@@ -42,6 +42,7 @@ int main(int argc,char** argv){
 map map01("textureTest.jpg");
 
 while(continuer){
+
     rectanglePlein(0,0,TAILLEX,TAILLEY,noir,displayRenderer);
 
     AffichageMenu(boolEvent);
@@ -49,7 +50,9 @@ while(continuer){
     AffichageJeu();
 
 
+    SDL_GL_SwapWindow(displayWindow);
     refresh(displayRenderer);
+
     SDL_Delay(10);
 }
 return 0;

@@ -7,7 +7,7 @@ void DeplacementSouris(int Mx, int My, boolEvenement& boolEvent){
 
 bool Event_Moteur(boolEvenement& boolEvent){
 SDL_Event event;
-SDL_WaitEvent(&event);
+SDL_PollEvent(&event);
 int Mx,My;
 
 switch(event.type){
