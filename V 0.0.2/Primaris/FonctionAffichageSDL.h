@@ -34,6 +34,7 @@ SDL_QueryTexture(texture,NULL,NULL,&w,&h);
 tempT.w=w;tempT.h=h;
 SDL_RenderCopy(renderer,texture,NULL,&tempT);
                                 }
+else printf("NTM %s JE CONNAIS PAS",policeN);
 TTF_CloseFont(police);
 SDL_DestroyTexture(texture);
 SDL_FreeSurface(Surface);
