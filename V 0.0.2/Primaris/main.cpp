@@ -43,15 +43,14 @@ map map01("textureTest.jpg");
 
 while(continuer){
     rectanglePlein(0,0,TAILLEX,TAILLEY,noir,displayRenderer);
-    //SDL_GL_SwapWindow(displayWindow);
+
     AffichageMenu(boolEvent);
     continuer=Event_Moteur(boolEvent);
     AffichageJeu();
 
 
     refresh(displayRenderer);
-    SDL_Delay(1);
+    SDL_Delay(10);
 }
-
 return 0;
 }
