@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add directory="../../depend/SDL2-2.0.4/i686-w64-mingw32/include" />
 			<Add directory="../../depend/SDL2_ttf-2.0.14/i686-w64-mingw32/include" />
+			<Add directory="../../depend/SDLUtils" />
+			<Add directory="../../depend/SDL2_image-2.0.1/i686-w64-mingw32/include" />
 		</Compiler>
 		<Linker>
 			<Add library="mingw32" />
@@ -42,6 +44,8 @@
 			<Add library="opengl32" />
 			<Add library="glu32" />
 			<Add library="gdi32" />
+			<Add library="..\..\depend\SDL2_image-2.0.1\i686-w64-mingw32\lib\libSDL2_image.dll.a" />
+			<Add library="..\..\depend\SDL2_image-2.0.1\i686-w64-mingw32\lib\libSDL2_image.a" />
 			<Add directory="../../depend/SDL2-2.0.4/i686-w64-mingw32/lib" />
 			<Add directory="../../depend/SDL2_ttf-2.0.14/i686-w64-mingw32/lib" />
 		</Linker>
@@ -54,6 +58,7 @@
 		<Unit filename="hero.h" />
 		<Unit filename="jeu.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="map.h" />
 		<Unit filename="menu.h" />
 		<Unit filename="objet.h" />
 		<Unit filename="polygone.h" />

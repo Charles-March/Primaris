@@ -12,6 +12,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_opengl.h>
 #include <SDL2/SDL_ttf.h>
+#include "sdlglutils.h"
 #include "polygone.h"
 
 SDL_Renderer* displayRenderer;
@@ -27,12 +28,13 @@ coordonnees finMenu;
 #include "menu.h"
 #include "MoteurMain.h"
 #include "init.h"
-
+#include "map.h"
 int main(int argc,char** argv){
     Init_SDL();
     //Display_Render();
 bool continuer=true;
 
+map map01("textureTest.jpg");
 
 while(continuer){
     rectanglePlein(0,0,TAILLEX,TAILLEY,noir,displayRenderer);
