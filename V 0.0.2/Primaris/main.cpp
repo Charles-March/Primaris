@@ -29,6 +29,7 @@ struct boolEvenement {
 #include "hero.h"
 #include "jeu.h"
 #include "FonctionAffichageSDL.h"
+#include "FonctionAffichageGL.h"
 #include "menu.h"
 #include "MoteurMain.h"
 #include "init.h"

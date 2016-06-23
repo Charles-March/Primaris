@@ -71,8 +71,6 @@ void Init_SDL(){
     SDL_GL_SetAttribute( SDL_GL_DEPTH_SIZE, 24 );
     SDL_GL_SetAttribute( SDL_GL_DOUBLEBUFFER, 1 );
 
-    SDL_GLContext glcontext;
-
     SDL_GL_CreateContext(displayWindow);
     finMenu.setX(202);
     finMenu.setY(32);
