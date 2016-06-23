@@ -50,6 +50,7 @@ while(continuer){
 
 
     refresh(displayRenderer);
+    SDL_Delay(1);
 }
 
 return 0;
