@@ -12,12 +12,13 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_opengl.h>
 #include <SDL2/SDL_ttf.h>
+#include "polygone.h"
 
 SDL_Renderer* displayRenderer;
 SDL_Window* displayWindow;
 coordonnees finMenu;
 
-#include "polygone.h"
+
 #include "FonctionAffichageSDL.h"
 #include "menu.h"
 #include "MoteurMain.h"
@@ -31,7 +32,7 @@ bool continuer=true;
 
 while(continuer){
     AffichageMenu();
-    continuer=Event_Motewur();
+    continuer=Event_Moteur();
     AffichageJeu();
     SDL_GL_SwapWindow(displayWindow);
 }

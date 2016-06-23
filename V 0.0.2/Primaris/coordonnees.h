@@ -1,5 +1,10 @@
 class coordonnees{
+private:
 int x,y;
+public:
+coordonnees(){
+
+}
 
 coordonnees(int x,int y){
 this->x=x;
