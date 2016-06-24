@@ -30,8 +30,8 @@ struct boolEvenement {
 
 #include "objet.h"
 #include "coffre.h"
-#include "enemi.h"
-#include "hero.h"
+#include "ennemi.h"
+#include "heros.h"
 #include "jeu.h"
 
 #include "menu.h"

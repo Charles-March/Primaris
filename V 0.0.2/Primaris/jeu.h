@@ -1,32 +1,28 @@
+#ifndef JEU_H
+#define JEU_H
+
 #include <list>
-class jeu{
+#include <gl/glu.h>
+#include "polygone.h"
+#include "coordonnees.h"
+#include "heros.h"
+#include "objet.h"
+#include "coffre.h"
+#include "ennemi.h"
+
+class jeu
+{
 public:
-std::list<polygone*> lp;
-std::list<enemi*> le;
-std::list<objet*> lo;
-std::list<coffre*> lc;
-hero player;
+    std::list<polygone*> lp;
+    std::list<ennemi*> le;
+    std::list<objet*> lo;
+    std::list<coffre*> lc;
+    heros player;
 
-jeu(char* PathFile){
-
-}
-
-void addp(polygone* p){
-lp.push_back(p);
-}
-
-jeu(){
-
-}
-
-void affiche(GLuint text,coordonnees c){
-int i;
-for(i=0;i<lp.size();i++){
-    AffichePolynome(lp.front(),c,text);
-    lp.push_back((polygone*)lp.front());
-    lp.pop_front();
-}
-
-}
-
+    jeu(char* PathFile);
+    void addp(polygone* p);
+    jeu();
+    void affiche(GLuint text,coordonnees c);
 };
+
+#endif

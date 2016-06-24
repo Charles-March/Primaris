@@ -1,19 +1,17 @@
-class map{
+#ifndef MAP_H
+#define MAP_H
+
+#include "jeu.h"
+
+class map
+{
 public:
-jeu univers;
-GLuint texture_poly;
-map(const char* text){
-texture_poly=loadTexture(text,true);
-remplir_univers();
+    jeu univers;
+    GLuint texture_poly;
 
-}
-
-void remplir_univers(){
-univers.addp(new polygone());
-}
-
-void affiche(){
-
-}
-
+    map(const char* text);
+    void remplir_univers();
+    void affiche();
 };
+
+#endif
