@@ -21,6 +21,9 @@ coordonnees finMenu;
 
 struct boolEvenement {
     bool SourisSurNouveau;
+    bool SourisSurOuvrir;
+    bool SourisSurEnregistrer;
+    bool SourisSurEnregistrerSous;
 };
 
 #include "objet.h"
