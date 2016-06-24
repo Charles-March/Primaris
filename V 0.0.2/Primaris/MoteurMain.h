@@ -1,8 +1,15 @@
 void DeplacementSouris(int Mx, int My, boolEvenement& boolEvent){
-    if(Mx>=0 && Mx<=100 && My>=0 && My<=30)
+    if(Mx>=0 && Mx<=99 && My>=0 && My<=30) {
         boolEvent.SourisSurNouveau = true;
-    else
+        boolEvent.SourisSurOuvrir = false;
+        boolEvent.SourisSurEnregistrer = false;
+        boolEvent.SourisSurEnregistrerSous = false;
+    } else if(Mx>=100 && Mx<=198 && My>=0 && My<=30) {
         boolEvent.SourisSurNouveau = false;
+        boolEvent.SourisSurOuvrir = true;
+        boolEvent.SourisSurEnregistrer = false;
+        boolEvent.SourisSurEnregistrerSous = false;
+    }
 }
 
 bool Event_Moteur(boolEvenement& boolEvent){

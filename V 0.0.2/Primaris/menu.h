@@ -19,6 +19,8 @@ void MenuHaut(SDL_Renderer* renderer,boolEvenement boolEvent){
 
     if(boolEvent.SourisSurNouveau==true)
         rectangleVide(1, 1, 98, 30, noir, renderer);
+    else if (boolEvent.SourisSurOuvrir==true)
+        rectangleVide(100, 1, 98, 30, noir, renderer);
 }
 
 void AffichageMenu(boolEvenement& boolEvent){
