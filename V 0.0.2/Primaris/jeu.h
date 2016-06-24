@@ -1,9 +1,9 @@
 class jeu{
 private:
-std::list<polygone> lp;
-std::list<enemi> le;
-std::list<objet> lo;
-std::list<coffre> lc;
+std::vector<polygone> lp;
+std::vector<enemi> le;
+std::vector<objet> lo;
+std::vector<coffre> lc;
 hero player;
 public:
 jeu(char* PathFile){

@@ -1,13 +1,25 @@
-#include <list>
+#include <vector>
 #include "coordonnees.h"
 
 class polygone{
-std::list<coordonnees> vecteur;
+private:
 int nbCote;
 
-polygone(std::list<coordonnees> a){
+public:
+std::vector<coordonnees> vecteur;
+
+
+polygone(std::vector<coordonnees> a){
 vecteur=a;
-nbCote=a.size();
+setnbCote(a.size());
+}
+
+void setnbCote(int i){
+nbCote=i;
+}
+
+int getNb(){
+return nbCote;
 }
 
 
