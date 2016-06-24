@@ -1,6 +1,7 @@
 #ifndef MENU_H
 #define MENU_H
-
+#include <SDL2/SDL.h>
+#include "main.cpp"
 void MenuGauche(SDL_Renderer* renderer,boolEvenement& boolEvent);
 void MenuHaut(SDL_Renderer* renderer,boolEvenement boolEvent);
 void AffichageMenu(boolEvenement& boolEvent);

@@ -1,5 +1,6 @@
 #include "map.h"
 #include <gl/glu.h>
+//#include "sdlglutils.h"
 #include <gl/gl.h>
 
 map::map(const char* text)

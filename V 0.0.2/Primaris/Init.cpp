@@ -1,4 +1,6 @@
 #include "Init.h"
+#include "main.cpp"
+#include <SDL2/SDL.h>
 #include <gl/glu.h>
 
 void Display_InitGL()
