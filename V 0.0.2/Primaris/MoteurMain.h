@@ -9,6 +9,11 @@ void DeplacementSouris(int Mx, int My, boolEvenement& boolEvent){
         boolEvent.SourisSurOuvrir = true;
         boolEvent.SourisSurEnregistrer = false;
         boolEvent.SourisSurEnregistrerSous = false;
+    } else if(Mx>=199 && Mx<=347 && My>=0 && My<=30) {
+        boolEvent.SourisSurNouveau = false;
+        boolEvent.SourisSurOuvrir = false;
+        boolEvent.SourisSurEnregistrer = true;
+        boolEvent.SourisSurEnregistrerSous = false;
     }
 }
 
