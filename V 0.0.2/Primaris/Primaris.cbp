@@ -49,19 +49,32 @@
 			<Add directory="../../depend/SDL2-2.0.4/i686-w64-mingw32/lib" />
 			<Add directory="../../depend/SDL2_ttf-2.0.14/i686-w64-mingw32/lib" />
 		</Linker>
+		<Unit filename="FonctionAffichageGL.cpp" />
 		<Unit filename="FonctionAffichageGL.h" />
+		<Unit filename="FonctionAffichageSDL.cpp" />
 		<Unit filename="FonctionAffichageSDL.h" />
+		<Unit filename="Init.cpp" />
 		<Unit filename="Init.h" />
+		<Unit filename="MoteurMain.cpp" />
 		<Unit filename="MoteurMain.h" />
+		<Unit filename="coffre.cpp" />
 		<Unit filename="coffre.h" />
+		<Unit filename="coordonnees.cpp" />
 		<Unit filename="coordonnees.h" />
-		<Unit filename="enemi.h" />
-		<Unit filename="hero.h" />
+		<Unit filename="ennemi.cpp" />
+		<Unit filename="ennemi.h" />
+		<Unit filename="heros.cpp" />
+		<Unit filename="heros.h" />
+		<Unit filename="jeu.cpp" />
 		<Unit filename="jeu.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="map.cpp" />
 		<Unit filename="map.h" />
+		<Unit filename="menu.cpp" />
 		<Unit filename="menu.h" />
+		<Unit filename="objet.cpp" />
 		<Unit filename="objet.h" />
+		<Unit filename="polygone.cpp" />
 		<Unit filename="polygone.h" />
 		<Unit filename="sample.txt" />
 		<Extensions>
