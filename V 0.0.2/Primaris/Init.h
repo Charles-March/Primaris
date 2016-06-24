@@ -78,6 +78,6 @@ void Init_SDL(){
 
 
     Display_SetViewport(TAILLEX-finMenu.getX(), TAILLEY-finMenu.getY());
-    SDL_GL_SetSwapInterval(1);
+    SDL_GL_SetSwapInterval(0);
 }
 
