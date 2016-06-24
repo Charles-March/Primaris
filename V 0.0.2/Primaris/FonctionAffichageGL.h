@@ -1,21 +1,25 @@
 std::vector<coordonnees> transformeP(polygone* p,coordonnees c){
-std::vector<coordonnees> l;
+std::vector<coordonnees> l(p->getNb());
 int i;
 for(i=0;i<p->getNb();i++){
-    p->vecteur.at(i);
+    l.at(i).setX(p->vecteur.at(i).getX()-c.getX());
+    l.at(i).setY(p->vecteur.at(i).getY()-c.getY());
 }
 
-
+return l;
 }
 
 void AffichePolynome(polygone* p,coordonnees c,GLuint text){
 int i;
-glColor3ub(0, 0, 255);
+std::vector<coordonnees> l(p->getNb());
+l = transformeP(p,c);
+
+glBindTexture(GL_TEXTURE_2D, text);
 glBegin(GL_POLYGON);
 
 for(i=0;i<p->getNb();i++){
 
-	glVertex2f(-.5,  -1);
+	glVertex2f(l.at(i).getX(),  l.at(i).getY());
 }
 
 glEnd();

@@ -25,14 +25,15 @@ struct boolEvenement {
     bool SourisSurEnregistrer;
     bool SourisSurEnregistrerSous;
 };
+#include "FonctionAffichageSDL.h"
+#include "FonctionAffichageGL.h"
 
 #include "objet.h"
 #include "coffre.h"
 #include "enemi.h"
 #include "hero.h"
 #include "jeu.h"
-#include "FonctionAffichageSDL.h"
-#include "FonctionAffichageGL.h"
+
 #include "menu.h"
 #include "MoteurMain.h"
 #include "init.h"
