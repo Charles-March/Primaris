@@ -56,7 +56,7 @@ int Display_SetViewport( int width, int height )
     return 1;
 }
 
-void Init_SDL()
+void Init_SDL(SDL_Renderer* displayRenderer)
 {
     SDL_Init(SDL_INIT_VIDEO);
     TTF_Init();

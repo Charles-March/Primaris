@@ -1,7 +1,7 @@
 #ifdef __cplusplus
-    #include <cstdlib>
+#include <cstdlib>
 #else
-    #include <stdlib.h>
+#include <stdlib.h>
 #endif
 #include <windows.h>
 #include <string>
@@ -14,17 +14,13 @@
 #include <SDL2/SDL_ttf.h>
 #include "sdlglutils.h"
 #include "polygone.h"
+#include "boolEvenement.h"
 
-SDL_Renderer* displayRenderer;
-SDL_Window* displayWindow;
-coordonnees finMenu;
+//extern SDL_Renderer* displayRenderer;
+extern SDL_Window* displayWindow;
+extern coordonnees finMenu;
 
-struct boolEvenement {
-    bool SourisSurNouveau;
-    bool SourisSurOuvrir;
-    bool SourisSurEnregistrer;
-    bool SourisSurEnregistrerSous;
-};
+
 #include "FonctionAffichageSDL.h"
 #include "FonctionAffichageGL.h"
 
@@ -38,15 +34,20 @@ struct boolEvenement {
 #include "MoteurMain.h"
 #include "init.h"
 #include "map.h"
-int main(int argc,char** argv){
-    Init_SDL();
-    //Display_Render();
-    bool continuer=true;
-    struct boolEvenement boolEvent = {false};
+
+int main(int argc,char** argv)
+{
+SDL_Renderer* displayRenderer;
+Init_SDL(displayRenderer);
+//Display_Render();
+bool continuer=true;
+struct boolEvenement boolEvent;
+
 
 map map01("textureTest.jpg");
 
-while(continuer){
+while(continuer)
+{
 
     rectanglePlein(0,0,TAILLEX,TAILLEY,noir,displayRenderer);
 
@@ -55,7 +56,7 @@ while(continuer){
     AffichageJeu();
 
 
-   // SDL_GL_SwapWindow(displayWindow);
+    // SDL_GL_SwapWindow(displayWindow);
     SDL_GL_GetSwapInterval();
     refresh(displayRenderer);
 

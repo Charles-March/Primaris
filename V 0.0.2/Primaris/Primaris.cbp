@@ -57,6 +57,7 @@
 		<Unit filename="Init.h" />
 		<Unit filename="MoteurMain.cpp" />
 		<Unit filename="MoteurMain.h" />
+		<Unit filename="boolEvenement.h" />
 		<Unit filename="coffre.cpp" />
 		<Unit filename="coffre.h" />
 		<Unit filename="coordonnees.cpp" />

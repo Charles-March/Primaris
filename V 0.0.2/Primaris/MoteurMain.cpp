@@ -1,4 +1,5 @@
 #include "MoteurMain.h"
+#include <SDL2/SDL.h>
 
 void DeplacementSouris(int Mx, int My, boolEvenement& boolEvent)
 {

@@ -1,4 +1,5 @@
 #include "menu.h"
+#include "FonctionAffichageSDL.h"
 
 void MenuGauche(SDL_Renderer* renderer,boolEvenement& boolEvent)
 {
@@ -31,7 +32,7 @@ void MenuHaut(SDL_Renderer* renderer,boolEvenement boolEvent)
         rectangleVide(348, 1, 203, 30, noir, renderer);
 }
 
-void AffichageMenu(boolEvenement& boolEvent)
+void AffichageMenu(boolEvenement& boolEvent,SDL_Renderer* displayRenderer)
 {
     MenuGauche(displayRenderer,boolEvent);
     MenuHaut(displayRenderer,boolEvent);
