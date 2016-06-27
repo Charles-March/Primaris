@@ -53,7 +53,7 @@ while(continuer)
 
     rectanglePlein(0,0,TAILLEX,TAILLEY,noir,displayRenderer);
 
-    AffichageMenu(boolEvent);
+    AffichageMenu(boolEvent,displayRenderer);
     continuer=Event_Moteur(boolEvent);
     AffichageJeu();
 

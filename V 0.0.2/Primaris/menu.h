@@ -5,6 +5,6 @@
 
 void MenuGauche(SDL_Renderer* renderer,boolEvenement& boolEvent);
 void MenuHaut(SDL_Renderer* renderer,boolEvenement boolEvent);
-void AffichageMenu(boolEvenement& boolEvent);
+void AffichageMenu(boolEvenement& boolEvent,SDL_Renderer* displayRenderer);
 
 #endif
