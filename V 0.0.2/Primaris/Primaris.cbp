@@ -78,6 +78,8 @@
 		<Unit filename="polygone.cpp" />
 		<Unit filename="polygone.h" />
 		<Unit filename="sample.txt" />
+		<Unit filename="sdlglutils.cpp" />
+		<Unit filename="sdlglutils.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
