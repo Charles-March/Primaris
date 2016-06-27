@@ -7,6 +7,6 @@
 
 void Display_InitGL();
 int Display_SetViewport( int width, int height,coordonnees* finMenu);
-void Init_SDL(SDL_Renderer* displayRenderer,SDL_Window* displayWindow,coordonnees* finMenu);
+void Init_SDL(SDL_Renderer** displayRenderer,SDL_Window** displayWindow,coordonnees* finMenu);
 
 #endif

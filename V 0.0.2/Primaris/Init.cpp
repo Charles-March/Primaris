@@ -57,14 +57,14 @@ int Display_SetViewport( int width, int height, coordonnees* finMenu)
     return 1;
 }
 
-void Init_SDL(SDL_Renderer* displayRenderer, SDL_Window* displayWindow, coordonnees* finMenu)
+void Init_SDL(SDL_Renderer** displayRenderer, SDL_Window** displayWindow, coordonnees* finMenu)
 {
     SDL_Init(SDL_INIT_VIDEO);
     TTF_Init();
 
     SDL_RendererInfo displayRendererInfo;
-    SDL_CreateWindowAndRenderer(TAILLEX,TAILLEY, SDL_WINDOW_OPENGL, &displayWindow, &displayRenderer);
-    SDL_GetRendererInfo(displayRenderer, &displayRendererInfo);
+    SDL_CreateWindowAndRenderer(TAILLEX,TAILLEY, SDL_WINDOW_OPENGL, displayWindow, displayRenderer);
+    SDL_GetRendererInfo(*displayRenderer, &displayRendererInfo);
     /*TODO: Check that we have OpenGL */
     if ((displayRendererInfo.flags & SDL_RENDERER_ACCELERATED) == 0 ||
             (displayRendererInfo.flags & SDL_RENDERER_TARGETTEXTURE) == 0)
@@ -77,7 +77,7 @@ void Init_SDL(SDL_Renderer* displayRenderer, SDL_Window* displayWindow, coordonn
     SDL_GL_SetAttribute( SDL_GL_DEPTH_SIZE, 24 );
     SDL_GL_SetAttribute( SDL_GL_DOUBLEBUFFER, 1 );
 
-    SDL_GL_CreateContext(displayWindow);
+    SDL_GL_CreateContext(*displayWindow);
     finMenu->setX(202);
     finMenu->setY(32);
     Display_InitGL();
