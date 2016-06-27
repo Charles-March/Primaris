@@ -2,7 +2,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include <GL/glu.h>
-
+#include <stdio.h>
 #include <cstring>
 #include <cstdlib>
 
@@ -175,7 +175,7 @@ void drawAxis(double scale)
     glPopMatrix();
     glPopAttrib();
 }
-
+/*
 int initFullScreen(unsigned int * width,unsigned int * height)
 {
     SDL_Rect ** modes;
@@ -197,7 +197,7 @@ int initFullScreen(unsigned int * width,unsigned int * height)
         return 0;
     }
 }
-
+*/
 int XPMFromImage(const char * imagefile, const char * XPMfile)
 {
     SDL_Surface * image,*image32bits;
