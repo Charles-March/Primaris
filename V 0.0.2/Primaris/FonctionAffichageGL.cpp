@@ -2,6 +2,8 @@
 #include <stdio.h>
 std::vector<coordonnees> transformeP(polygone* p,coordonnees c)
 {
+    printf("p->getNb : %d\n",p->getNb());
+
     std::vector<coordonnees> l(p->getNb());
     int i;
     for(i=0; i<p->getNb(); i++)
@@ -23,6 +25,7 @@ void AffichePolynome(polygone* p,coordonnees c,GLuint text)
     glBindTexture(GL_TEXTURE_2D, text);
     glBegin(GL_POLYGON);
     printf("coucou2");
+
     for(i=0; i<p->getNb(); i++)
     {
         glVertex2f(l.at(i).getX(),  l.at(i).getY());
