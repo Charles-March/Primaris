@@ -38,8 +38,8 @@ extern coordonnees finMenu;
 int main(int argc,char** argv)
 {
 coordonnees finMenu;
-SDL_Window* displayWindow;
-SDL_Renderer* displayRenderer;
+SDL_Window* displayWindow=NULL;
+SDL_Renderer* displayRenderer=NULL;
 Init_SDL(displayRenderer,displayWindow,&finMenu);
 //Display_Render();
 bool continuer=true;
@@ -59,7 +59,7 @@ while(continuer)
 
 
     // SDL_GL_SwapWindow(displayWindow);
-    SDL_GL_GetSwapInterval();
+    //SDL_GL_GetSwapInterval();
     refresh(displayRenderer);
 
     SDL_Delay(10);

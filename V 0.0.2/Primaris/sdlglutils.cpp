@@ -204,7 +204,8 @@ int XPMFromImage(const char * imagefile, const char * XPMfile)
     FILE * xpm;
     Uint32 pixel;
     Uint8 r,g,b,a;
-    int x,y;
+    int x;
+    int y;
     unsigned int w;
     char * xpm_name;
     Uint32 rmask, gmask, bmask, amask;
@@ -270,7 +271,7 @@ int XPMFromImage(const char * imagefile, const char * XPMfile)
             else
                 fprintf(xpm,"X");
         }
-        for (x = image32bits->w ; x < w ; x ++)
+        for (x = image32bits->w ; x < (int)w ; x ++) //peut être enlever le cast
             fprintf(xpm," ");
         fprintf(xpm,"\",\n");
     }

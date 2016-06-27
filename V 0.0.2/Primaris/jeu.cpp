@@ -18,7 +18,7 @@ jeu::jeu()
 
 void jeu::affiche(GLuint text,coordonnees c)
 {
-    int i;
+    unsigned int i;
     for(i=0; i<lp.size(); i++)
     {
         AffichePolynome(lp.front(),c,text);
