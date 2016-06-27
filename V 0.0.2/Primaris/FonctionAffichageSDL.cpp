@@ -9,6 +9,8 @@ void refresh(SDL_Renderer* renderer)
 void affichetexte(const char* text,int x, int y, int Taille,const char* policeN,SDL_Color Color,SDL_Renderer* renderer)
 {
     int w=0,h=0;
+    SDL_Rect tempT;
+    TTF_Font *police=NULL;
     SDL_Surface *Surface=NULL;
     SDL_Texture *texture=NULL;
     tempT.x=x;
