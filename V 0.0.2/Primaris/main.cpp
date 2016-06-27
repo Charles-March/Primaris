@@ -55,7 +55,7 @@ while(continuer)
 
     AffichageMenu(boolEvent,displayRenderer);
     continuer=Event_Moteur(boolEvent);
-    AffichageJeu();
+    AffichageJeu(map01,finMenu);
 
 
     // SDL_GL_SwapWindow(displayWindow);

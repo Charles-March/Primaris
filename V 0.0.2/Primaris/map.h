@@ -11,7 +11,7 @@ public:
 
     map(const char* text);
     void remplir_univers();
-    void affiche();
+    void affiche(coordonnees finMenu);
 };
 
 #endif

@@ -14,7 +14,7 @@ void map::remplir_univers()
     univers.addp(new polygone());
 }
 
-void affiche()
+void map::affiche(coordonnees finMenu)
 {
-
+this->univers.affiche(this->texture_poly,finMenu);
 }

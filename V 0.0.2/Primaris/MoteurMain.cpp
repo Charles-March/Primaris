@@ -111,7 +111,7 @@ bool Event_Moteur(boolEvenement& boolEvent)
     return true;
 }
 
-void AffichageJeu()
+void AffichageJeu(map m,coordonnees finMenu)
 {
-
+m.affiche(finMenu);
 }
