@@ -58,9 +58,9 @@ while(continuer)
     AffichageJeu(map01,finMenu);
 
 
-    // SDL_GL_SwapWindow(displayWindow);
+    //SDL_GL_SwapWindow(displayWindow);
     //SDL_GL_GetSwapInterval();
-    refresh(displayRenderer);
+    refresh(displayRenderer,displayWindow);
 
     SDL_Delay(10);
 }

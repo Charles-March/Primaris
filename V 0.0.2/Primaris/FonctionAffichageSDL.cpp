@@ -1,8 +1,9 @@
 #include "FonctionAffichageSDL.h"
 
-void refresh(SDL_Renderer* renderer)
+void refresh(SDL_Renderer* renderer,SDL_Window* Window)
 {
     SDL_RenderPresent(renderer);
+    SDL_GL_SwapWindow(Window);
     SDL_RenderClear(renderer);
 }
 

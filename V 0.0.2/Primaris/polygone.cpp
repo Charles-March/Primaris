@@ -4,9 +4,9 @@
 polygone::polygone()
 {
     vecteur.resize(3);
-    vecteur.at(0)= coordonnees(10,10);
-    vecteur.at(1)= coordonnees(20,10);
-    vecteur.at(2)= coordonnees(10,20);
+    vecteur.at(0)= coordonnees(10+202,10+32);
+    vecteur.at(1)= coordonnees(20+202,10+32);
+    vecteur.at(2)= coordonnees(10+202,20+32);
     nbCote=3;
 }
 

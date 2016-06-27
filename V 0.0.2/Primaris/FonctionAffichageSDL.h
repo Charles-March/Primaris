@@ -22,7 +22,7 @@ SDL_Color blanc= {255,255,255};
 SDL_Color gris= {128,128,128};
 */
 
-void refresh(SDL_Renderer* renderer);
+void refresh(SDL_Renderer* renderer,SDL_Window* Window);
 void affichetexte(const char* text,int x, int y, int Taille,const char* policeN,SDL_Color Color,SDL_Renderer* renderer);
 void rectangleVide(int x, int y, int w, int h,SDL_Color Color,SDL_Renderer* renderer);
 void rectanglePlein(int x, int y, int w, int h,SDL_Color Color,SDL_Renderer* renderer);
