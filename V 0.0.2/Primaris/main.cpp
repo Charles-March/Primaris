@@ -37,8 +37,10 @@ extern coordonnees finMenu;
 
 int main(int argc,char** argv)
 {
+coordonnees finMenu;
+SDL_Window* displayWindow;
 SDL_Renderer* displayRenderer;
-Init_SDL(displayRenderer);
+Init_SDL(displayRenderer,displayWindow,finMenu);
 //Display_Render();
 bool continuer=true;
 struct boolEvenement boolEvent;
