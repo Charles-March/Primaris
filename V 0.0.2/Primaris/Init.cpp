@@ -1,5 +1,6 @@
 #include "Init.h"
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
 #include <gl/glu.h>
 #include "coordonnees.h"
 
@@ -82,6 +83,6 @@ void Init_SDL(SDL_Renderer* displayRenderer, SDL_Window* displayWindow, coordonn
     Display_InitGL();
 
 
-    Display_SetViewport(TAILLEX-finMenu->getX(), TAILLEY-finMenu->getY());
+    Display_SetViewport(TAILLEX-finMenu->getX(), TAILLEY-finMenu->getY(),finMenu);
     SDL_GL_SetSwapInterval(0);
 }
