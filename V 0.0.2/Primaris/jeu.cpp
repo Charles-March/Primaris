@@ -23,11 +23,11 @@ void jeu::affiche(GLuint text,coordonnees c)
     unsigned int i;
     for(i=0; i<lp.size(); i++)
     {
-        printf("lp.size : %d\n",lp.size());
-        printf("coucou\n");
+ //       printf("lp.size : %d\n",lp.size());
+ //       printf("coucou\n");
         AffichePolynome(lp.front(),c,text);
         lp.push_back((polygone*)lp.front());
         lp.pop_front();
-        printf("coucou\n");
+ //       printf("coucou\n");
     }
 }

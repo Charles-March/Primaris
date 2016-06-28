@@ -16,6 +16,7 @@
 #include "polygone.h"
 #include "boolEvenement.h"
 
+
 //extern SDL_Renderer* displayRenderer;
 extern SDL_Window* displayWindow;
 extern coordonnees finMenu;

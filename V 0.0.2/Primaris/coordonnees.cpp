@@ -8,12 +8,25 @@ coordonnees::coordonnees(int x,int y)
     this->y=y;
 }
 
-int coordonnees::getX()
+coordonnees::coordonnees(double x,double y){
+this->x=x;
+this->y=y;
+}
+
+void coordonnees::setX(double a){
+x=a;
+}
+
+void coordonnees::setY(double a){
+x=a;
+}
+
+double coordonnees::getX()
 {
     return x;
 }
 
-int coordonnees::getY()
+double coordonnees::getY()
 {
     return y;
 }

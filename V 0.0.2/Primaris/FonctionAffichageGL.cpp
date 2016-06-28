@@ -3,9 +3,15 @@
 
 std::vector<coordonnees> CalculRelatif(std::vector<coordonnees> l, coordonnees c){
 int i;
+coordonnees center;
+center.setX(TAILLEX/2);
+center.setY(TAILLEY/2);
 for(i=0;i<l.size();i++){
+    l.at(i).setX((l.at(i).getX()-center.getX())/TAILLEX);
+    l.at(i).setY((l.at(i).getY()-center.getY())/TAILLEY);
 
 }
+return l;
 }
 
 std::vector<coordonnees> transformeP(polygone* p,coordonnees c)
@@ -20,7 +26,7 @@ std::vector<coordonnees> transformeP(polygone* p,coordonnees c)
         l.at(i).setY(p->vecteur.at(i).getY()-c.getY());
         printf("X : %d | Y : %d \n",l.at(i).getX(),l.at(i).getY());
     }
-    return l;
+    return CalculRelatif(l,c);
 }
 
 void AffichePolynome(polygone* p,coordonnees c,GLuint text)
@@ -41,6 +47,6 @@ void AffichePolynome(polygone* p,coordonnees c,GLuint text)
     }
 //    printf("coucou3");
     glEnd();
-    printf("j'affiche un polynome\n");
+  //  printf("j'affiche un polynome\n");
     delete(&l);
 }

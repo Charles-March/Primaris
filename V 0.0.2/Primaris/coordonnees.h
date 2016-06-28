@@ -4,15 +4,19 @@
 class coordonnees
 {
 private:
-    int x,y;
+    double x,y;
 
 public:
     coordonnees();
     coordonnees(int x,int y);
-    int getX();
-    int getY();
+    coordonnees(double x,double y);
+    double getX();
+    double getY();
     void setX(int a);
     void setY(int a);
+    void setX(double a);
+    void setY(double a);
+
 };
 
 #endif
